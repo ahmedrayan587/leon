@@ -1,0 +1,222 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+i {
+    color: var(--main-color);
+}
+.header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+
+}
+
+.header img {
+    position: absolute;
+    left: 20%;
+    top: 17px;
+    width: 60px;
+    height: 24px;
+
+}
+
+.header div {
+    position: absolute;
+    left: 80%;
+    top: 6px;
+    width: 35px;
+    height: 36px;
+
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -6px;
+    width: 35px;
+    height: 1px;
+    background-color: var(--secondary-color);
+
+}
+
+.icon {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 25px;
+    width: 20px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    
+
+}
+
+.icon::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 35px;
+    height: 3px;
+    background-color: var(--secondary-color);
+
+}
+
+.header div:hover .icon {
+    width: 35px;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+
+}
+
+.header div:hover .icon + ul {
+    z-index: 1;
+    transition-duration: 0.2s;
+}
+
+ul {
+    z-index: -1;
+    position: absolute;
+    list-style: none;
+    background-color: #f6f6f6;
+    border-color: var(--section-background);
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    top: 35px;
+    left: -150px;
+
+}
+
+ul::before {
+    content: "";
+    position: absolute;
+    border: 10px;
+    border-color: transparent transparent #f6f6f6 transparent;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: 80%;
+    top: -20px;
+
+
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    transition-duration: 0.5s;
+
+}
+
+li:hover {
+    transform: translateX(15px);
+
+}
+
+.landing {
+    position: relative;
+    background-image: url(../image/landing.jpg);
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 64px);
+
+}
+
+.landing div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+
+}
+
+.landing h1 {
+    color: var(--main-color);
+    font-size: 50px;
+
+}
+
+.landing p {
+    line-height: 30px;
+    color: rgb(135, 132, 132);
+
+}
+
+.features {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.serhead,
+.porthead,
+.abouthead {
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    color: #ebeced;
+
+}
+
+h2 {
+    font-size: 100px;
+    font-weight: 800;
+}
+
+.serhead p,
+.porthead p,
+.abouthead p {
+    font-size: 20px;
+    font-family: "work sans";
+    margin-top: -9.5%;
+    color: #777;
+
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.feat,.ser,.port {
+    padding: 20px;
+    text-align: center;
+
+}
+img {
+    width: 100% ;
+}
+.ser:last-of-type {
+    position: relative;
+}
+.ser span {
+    position: absolute;
+    z-index: -1;
+    width: 30%;
+    height: calc(100% + 50px);
+    top: -25px;
+    right: -8%;
+    background-color: var(--secondary-color);
+}
