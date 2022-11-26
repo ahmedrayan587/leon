@@ -60,7 +60,7 @@ i {
     width: 20px;
     height: 2px;
     background-color: var(--secondary-color);
-    
+    transition: .5s;
 
 }
 
